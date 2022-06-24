@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 14e76a27aeb1ece4788f88a35f951265
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - stageFolder: {fileID: 1003361449691208217, guid: 4a1095a5cf75e88419fa28709fff1ef1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
