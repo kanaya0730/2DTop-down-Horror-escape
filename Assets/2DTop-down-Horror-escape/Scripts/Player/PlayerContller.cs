@@ -19,6 +19,6 @@ public class PlayerContller : MonoBehaviour
         float y = Input.GetAxis("Vertical");
 
         Vector2 dir = new Vector2(x, y).normalized;
-        GetComponent<Rigidbody2D>().velocity = dir * speed;
+        rB2.velocity = dir * speed;
     }
 }
