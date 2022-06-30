@@ -18,24 +18,34 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         float horizintalkey = Input.GetAxis("Horizontal");
-        
-
-
+        float varticalkey = Input.GetAxis("Vertical");
 
         if (horizintalkey > 0)
         {
-            _rb.AddForce(transform.right * 10.0f);
+            _rb.velocity = new Vector2(_speed, _rb.velocity.y);
         }
-
         else if (horizintalkey < 0)
         {
-            _rb.AddForce(-transform.right * 10.0f);
-
+            _rb.velocity = new Vector2(-_speed, _rb.velocity.y);
         }
         else
         {
-            _rb.velocity = Vector2.zero;
+            _rb.velocity = new Vector2(0,_rb.velocity.y);
+        }        
+
+        if (varticalkey > 0)
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, _speed);
         }
+        else if (varticalkey < 0)
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, -_speed);
+        }
+        else
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x,0);
+        }
+
      }
 }
 
