@@ -8,4 +8,40 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2DTop-down-Horror-escape/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/GameScene.unity
+    guid: 63e9712b65f226b45bc170d1ed1b0546
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map1.unity
+    guid: 2e7e5cf9e1252af42961494e02300c65
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map2.unity
+    guid: c58493c4fa2678f40a9a021b0c75fe74
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map3.unity
+    guid: 188dca8a5feeb344ab3f0ec46f62fd00
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map4.unity
+    guid: 5fb41527f42a09842ada27bf6c839998
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map5.unity
+    guid: 660ffcaf406a67f40bc4175ab160fc36
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map6.unity
+    guid: 8eebbbfc137ef944face3f7c972d5c76
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map7.unity
+    guid: 3c10992441695b340822cbe952376742
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map8.unity
+    guid: 58a5662402f05b94293ea62d304bfabb
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map9.unity
+    guid: 9d9210df38c1ebe4ba500838c1dbe539
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map10.unity
+    guid: a8f7689067cffed4a86623b18de447d2
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/Map11.unity
+    guid: 020c84c1c04fb4f469188636fe182473
   m_configObjects: {}
