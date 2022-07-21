@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerContller : MonoBehaviour
 {
-    [SerializeField] float speed = 2.0f;
+    public float speed = 2.0f;
     private Rigidbody2D rB2;
-    
 
     void Start()
     {
@@ -22,6 +21,4 @@ public class PlayerContller : MonoBehaviour
         Vector2 dir = new Vector2(x, y).normalized;
         rB2.velocity = dir * speed;
     }
-
-
 }

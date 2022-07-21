@@ -5,17 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MapMovement : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
-    [SerializeField] int _num;
 
-    
+    [SerializeField] private int _num;
 
-    void Start()
-    {
-      
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         switch(_num)
         {
