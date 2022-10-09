@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UniRx.Triggers;
 using UniRx;
 /// <summary>
 /// Playerの動きだけ
 /// </summary>
-public class PlayerBase : MonoBehaviour
+public class PlayerBase : MonoBehaviour,IDoor
 {
     /// <summary>
     /// プレイヤーの描画
@@ -36,10 +37,7 @@ public class PlayerBase : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.gameObject)// 仮にダメージを実装するのであればこのような感じで使ってもらえば大丈夫です
-        //{
-        //    _playerData.Damage(10);// 後でマジックナンバーを変更します。
-        //}
+        //_playerData.Damage(10);// 後でマジックナンバーを変更します。
     }
 
     void Move()
@@ -49,5 +47,11 @@ public class PlayerBase : MonoBehaviour
 
         Vector2 dir = new Vector2(x, y).normalized;
         _rb2D.velocity = dir * _speed;
+    }
+
+    public void SceneName(string sceneName)
+    {
+        SceneManager.LoadSceneAsync(sceneName);
+        print(sceneName + "へ移動した");
     }
 }
