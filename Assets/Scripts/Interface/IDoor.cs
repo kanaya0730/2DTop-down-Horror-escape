@@ -1,0 +1,4 @@
+public interface IDoor
+{
+    void SceneName(string sceneName);// ÉVÅ[Éìñº
+}
