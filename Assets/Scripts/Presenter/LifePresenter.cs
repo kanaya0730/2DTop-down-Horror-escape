@@ -13,6 +13,7 @@ public class LifePresenter : MonoBehaviour
 
     void Start()
     {
-        _playerData.Life.Subscribe(life => )
+        _playerData.Life.Subscribe(life => _lifeView.SetLife(life)).AddTo(this);
     }
+
 }
