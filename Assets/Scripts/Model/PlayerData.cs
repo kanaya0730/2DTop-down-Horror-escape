@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
-
+/// <summary>
+/// MVRP‚ÌM
+/// </summary>
 public class PlayerData : MonoBehaviour
 {
     public IntReactiveProperty Life => _life;
