@@ -10,11 +10,6 @@ using UniRx;
 public class PlayerBase : MonoBehaviour,IDoor
 {
     /// <summary>
-    /// プレイヤーの描画
-    /// </summary>
-    SpriteRenderer _renderer;
-
-    /// <summary>
     /// Rigidbody2D(剛体)
     /// </summary>
     Rigidbody2D _rb2D;
@@ -31,7 +26,6 @@ public class PlayerBase : MonoBehaviour,IDoor
     void Start()
     {
         this.UpdateAsObservable().Subscribe(x => Move());
-        _renderer = GetComponent<SpriteRenderer>();
         _rb2D = GetComponent<Rigidbody2D>();
     }
 
@@ -40,11 +34,14 @@ public class PlayerBase : MonoBehaviour,IDoor
         //_playerData.Damage(10);// 後でマジックナンバーを変更します。
     }
 
+    /// <summary>
+    /// Playerの動きを制御する関数
+    /// </summary>
     void Move()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxis("Vertical");
-        //Vector2 dir = new Vector2(x, y).normalized;
+
         _rb2D.velocity = new Vector2(x, y) * _speed;
 
         if (x < 0f)

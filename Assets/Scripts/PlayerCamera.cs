@@ -10,7 +10,7 @@ using UniRx;
 public class PlayerCamera : MonoBehaviour
 {
     [SerializeField]
-    [Header("プレイヤー")]
+    [Header("追従したいオブジェクト")]
     GameObject _player;
 
     void Start()
