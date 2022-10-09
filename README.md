@@ -45,4 +45,4 @@ Sourcetree,
 
 上記の3点を用いて制作しました
 
-参考文献 https://github.com/KanbaraRyusei/Raosvior/issues
+参考文献 issuesなど https://github.com/KanbaraRyusei/Raosvior/issues
