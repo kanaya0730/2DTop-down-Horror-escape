@@ -5,14 +5,14 @@ using UniRx;
 
 public class LifePresenter : MonoBehaviour
 {
-    //[SerializeField]
-    //PlayerData _playerData;
+    [SerializeField]
+    PlayerData _playerData;
 
-    //[SerializeField]
-    //LifeView _lifeView;
+    [SerializeField]
+    LifeView _lifeView;
 
-    //void Start()
-    //{
-    //    _playerData.Life.Subscribe(life => )    
-    //}
+    void Start()
+    {
+        _playerData.Life.Subscribe(life => )
+    }
 }
