@@ -42,11 +42,20 @@ public class PlayerBase : MonoBehaviour,IDoor
 
     void Move()
     {
-        float x = Input.GetAxis("Horizontal");
+        float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxis("Vertical");
+        //Vector2 dir = new Vector2(x, y).normalized;
+        _rb2D.velocity = new Vector2(x, y) * _speed;
 
-        Vector2 dir = new Vector2(x, y).normalized;
-        _rb2D.velocity = dir * _speed;
+        if (x < 0f)
+        {
+            transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        }
+        else if (x > 0f)
+        {
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        }
+        
     }
 
     public void SceneName(string sceneName)
