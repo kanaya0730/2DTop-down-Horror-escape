@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UniRx.Triggers;
 using UniRx;
@@ -14,6 +15,8 @@ public class PlayerBase : MonoBehaviour,IDoor
     /// </summary>
     Rigidbody2D _rb2D;
 
+    int _pauseCount = 1;
+
     [SerializeField]
     [Header("プレイヤーデータ")]
     PlayerData _playerData;
@@ -23,15 +26,51 @@ public class PlayerBase : MonoBehaviour,IDoor
     [Header("プレイヤーの移動スピード")]
     float _speed = 0.05f;
 
+    [SerializeField]
+    [Header("ポーズパネル")]
+    Image _pausePanel;
+
+
+
     void Start()
     {
         this.UpdateAsObservable().Subscribe(x => Move());
         _rb2D = GetComponent<Rigidbody2D>();
+        this.UpdateAsObservable().Subscribe(x => PauseResume());
+        print(_pauseCount);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //_playerData.Damage(10);// 後でマジックナンバーを変更します。
+        // タグを使いたくないのでInterfaceを使いましょう
+        // (例)↓
+        //if (collision.gameObject.TryGetComponent(out IDamage damage))
+        //{
+        //    damage.Damage(_damage);
+        //}
+    }
+
+    void PauseResume()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            switch (_pauseCount)
+            {
+                case 1:
+                    PauseTime.OnPaused.Subscribe(x => _speed = 0f).AddTo(gameObject);
+                    PauseTime.Pause();
+                    _pausePanel.gameObject.SetActive(true);
+                    break;
+
+                case 2:
+                    PauseTime.OnResume.Subscribe(x => _speed = 4.55f).AddTo(gameObject);
+                    PauseTime.Resume();
+                    _pausePanel.gameObject.SetActive(false);
+                    _pauseCount = 0;
+                    break;
+            }
+            ++_pauseCount;
+        }
     }
 
     /// <summary>
