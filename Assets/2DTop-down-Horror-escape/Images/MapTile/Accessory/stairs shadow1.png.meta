@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41948ffcb5ab75e438f622f121d061f9
+guid: ed08ce9cb5f5eba42b19779b5afa7241
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,49 +104,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bookshelf_empty_0
+      name: stairs shadow1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 140
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70c3b70cab07a0042bdee9cc0199f965
-      internalID: -1352304701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bookshelf_empty_1
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 420
         y: 70
         width: 70
         height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7477c65af0b954d9d61432ddf709bb
-      internalID: 99644949
+      spriteID: d3388da9f8854224a860660c492a3029
+      internalID: 1147223056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bookshelf_empty_2
+      name: stairs shadow1_1
       rect:
         serializedVersion: 2
         x: 0
@@ -154,14 +133,140 @@ TextureImporter:
         width: 70
         height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c43c650113f1e47b201bf4c050f50f
-      internalID: -1929580265
+      spriteID: 933d13e95e858184898a3860fc739c1f
+      internalID: -178561545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs shadow1_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408566c3452525744b46f3adec94bec3
+      internalID: -340136054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs shadow1_3
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd4669100493b749a3e47994522ccfc
+      internalID: 618606979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs shadow1_4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8819d1c63c67701408fb0e2cc76fbbe7
+      internalID: -1699440993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs shadow1_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a3cc15f6b9bc843876c540e6d32599
+      internalID: 1084087083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs shadow1_6
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754ef802a20d96a42b1bfb726b1612d7
+      internalID: -1219832123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs shadow1_7
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a06026f94a6dd43b398280ea9fab57
+      internalID: 2133562335
       vertices: []
       indices: 
       edges: []
@@ -177,9 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bookshelf_empty_2: -1929580265
-      bookshelf_empty_1: 99644949
-      bookshelf_empty_0: -1352304701
+      stairs shadow1_0: 1147223056
+      stairs shadow1_1: -178561545
+      stairs shadow1_3: 618606979
+      stairs shadow1_4: -1699440993
+      stairs shadow1_6: -1219832123
+      stairs shadow1_2: -340136054
+      stairs shadow1_5: 1084087083
+      stairs shadow1_7: 2133562335
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

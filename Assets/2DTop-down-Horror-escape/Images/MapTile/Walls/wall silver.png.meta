@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41948ffcb5ab75e438f622f121d061f9
+guid: 47c3ae270c4cb4b458cbf640b69829ba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bookshelf_empty_0
+      name: wall silver_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,20 +112,62 @@ TextureImporter:
         width: 70
         height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70c3b70cab07a0042bdee9cc0199f965
-      internalID: -1352304701
+      spriteID: 23e57cbed3cc85447a2790a3290d7dbf
+      internalID: -1843706898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bookshelf_empty_1
+      name: wall silver_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 140
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271dcfc9c379f154991ca49fd03bc38d
+      internalID: -1590792394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall silver_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 140
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92dacbc0810d5447b12ac8ef0020f7f
+      internalID: -2010791909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall silver_3
       rect:
         serializedVersion: 2
         x: 0
@@ -133,20 +175,62 @@ TextureImporter:
         width: 70
         height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7477c65af0b954d9d61432ddf709bb
-      internalID: 99644949
+      spriteID: 63af5fdb8fd68fd4784622aa807a02be
+      internalID: -643155203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bookshelf_empty_2
+      name: wall silver_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 70
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b9c0758c7db934e911b03567cf0aed
+      internalID: 569186723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall silver_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 70
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048da8778c1f89b42bfa8d9646694ed5
+      internalID: -1408123658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall silver_6
       rect:
         serializedVersion: 2
         x: 0
@@ -154,14 +238,56 @@ TextureImporter:
         width: 70
         height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c43c650113f1e47b201bf4c050f50f
-      internalID: -1929580265
+      spriteID: 72b2ddddd66df3442b90d46367bd95ea
+      internalID: -932065334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall silver_7
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b543ad6e8f54ad4ba039de4e0d187f6
+      internalID: 1854647313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall silver_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ba616df2e329e47bae0d3d52192551
+      internalID: 1260697575
       vertices: []
       indices: 
       edges: []
@@ -177,9 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bookshelf_empty_2: -1929580265
-      bookshelf_empty_1: 99644949
-      bookshelf_empty_0: -1352304701
+      wall silver_2: -2010791909
+      wall silver_6: -932065334
+      wall silver_1: -1590792394
+      wall silver_5: -1408123658
+      wall silver_0: -1843706898
+      wall silver_4: 569186723
+      wall silver_7: 1854647313
+      wall silver_3: -643155203
+      wall silver_8: 1260697575
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

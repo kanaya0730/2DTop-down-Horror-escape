@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41948ffcb5ab75e438f622f121d061f9
+guid: a87ab7a8cb2790b49909a2480e5fe2ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,28 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bookshelf_empty_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 140
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70c3b70cab07a0042bdee9cc0199f965
-      internalID: -1352304701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bookshelf_empty_1
+      name: Shelf 2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,20 +112,41 @@ TextureImporter:
         width: 70
         height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7477c65af0b954d9d61432ddf709bb
-      internalID: 99644949
+      spriteID: 38486e8d7678ae241afa3d403515c22d
+      internalID: 1268117950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bookshelf_empty_2
+      name: Shelf 2_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 70
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c745b01ed30deb24da88ef7c0db36ba1
+      internalID: -990698112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shelf 2_2
       rect:
         serializedVersion: 2
         x: 0
@@ -154,14 +154,35 @@ TextureImporter:
         width: 70
         height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c43c650113f1e47b201bf4c050f50f
-      internalID: -1929580265
+      spriteID: 47f34c9fa3a006847a9f4688cf94865d
+      internalID: 1359571985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shelf 2_3
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560822481adca114085263b0d2639cf7
+      internalID: -828266323
       vertices: []
       indices: 
       edges: []
@@ -177,9 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bookshelf_empty_2: -1929580265
-      bookshelf_empty_1: 99644949
-      bookshelf_empty_0: -1352304701
+      Shelf 2_3: -828266323
+      Shelf 2_0: 1268117950
+      Shelf 2_2: 1359571985
+      Shelf 2_1: -990698112
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
