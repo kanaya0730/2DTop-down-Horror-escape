@@ -8,10 +8,9 @@ using UnityEngine.UI;
 public class LifeView : MonoBehaviour
 {
     [SerializeField]
+    [Header("HPスライダー")]
     Slider _lifeSlider;
 
-    public void SetLife(int lifeValue)
-    {
-        _lifeSlider.value = lifeValue;
-    }
+
+    public void SetLife(int lifeValue) => _lifeSlider.value = lifeValue;
 }
