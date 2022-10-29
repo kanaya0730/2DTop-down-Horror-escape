@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
     [SerializeField]
-    [Header("移動したいシーンの名前を入れてください")]
-    string _sceneName;
+    [Header("移動したいシーンの場所を入れてください")]
+    Transform _scenePos;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out IDoor door))
         {
-            door.SceneName(_sceneName);
+            door.SceneName(_scenePos);
+            SoundManager.Instance.PlaySFX(SFXType.Door);// 現在はサウンドがないためエラーを吐きますが気にしないでください
         }
     }
 }

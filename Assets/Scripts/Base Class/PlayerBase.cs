@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using UniRx.Triggers;
 using UniRx;
 /// <summary>
@@ -15,12 +14,14 @@ public class PlayerBase : MonoBehaviour,IDoor
     /// </summary>
     Rigidbody2D _rb2D;
 
+    /// <summary>
+    /// ポーズカウント
+    /// </summary>
     int _pauseCount = 1;
 
     [SerializeField]
     [Header("プレイヤーデータ")]
     PlayerData _playerData;
-
 
     [SerializeField]
     [Header("プレイヤーの移動スピード")]
@@ -57,12 +58,14 @@ public class PlayerBase : MonoBehaviour,IDoor
             switch (_pauseCount)
             {
                 case 1:
+                    SoundManager.Instance.PlaySFX(SFXType.Pause);
                     PauseTime.OnPaused.Subscribe(x => _speed = 0f).AddTo(gameObject);
                     PauseTime.Pause();
                     _pausePanel.gameObject.SetActive(true);
                     break;
 
                 case 2:
+                    SoundManager.Instance.PlaySFX(SFXType.Pause);
                     PauseTime.OnResume.Subscribe(x => _speed = 4.55f).AddTo(gameObject);
                     PauseTime.Resume();
                     _pausePanel.gameObject.SetActive(false);
@@ -94,9 +97,13 @@ public class PlayerBase : MonoBehaviour,IDoor
         
     }
 
-    public void SceneName(string sceneName)
+    /// <summary>
+    /// シーンを変える関数
+    /// </summary>
+    /// <param name="sceneName">遷移したいシーンの名前</param>
+    public void SceneName(Transform sceneName)
     {
-        SceneManager.LoadSceneAsync(sceneName);
-        print(sceneName + "へ移動した");
+        transform.position = sceneName.transform.position;
+        print(sceneName.transform.name + "へ移動した");
     }
 }

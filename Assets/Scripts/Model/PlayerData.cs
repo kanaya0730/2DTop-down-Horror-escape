@@ -15,8 +15,6 @@ public class PlayerData : MonoBehaviour
 
     public void Damage(int value) => Life.Value -= value;
 
-
-
     void OnDestroy()
     {
         Life.Dispose();

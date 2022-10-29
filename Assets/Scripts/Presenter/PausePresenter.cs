@@ -13,8 +13,4 @@ public class PausePresenter : MonoBehaviour
     [SerializeField]
     PauseView _pauseView;
 
-    void Start()
-    {
-        
-    }
 }

@@ -12,8 +12,5 @@ public class LifeView : MonoBehaviour
     Slider _lifeSlider;
 
 
-    public void SetLife(int lifeValue)
-    {
-        _lifeSlider.value = lifeValue;
-    }
+    public void SetLife(int lifeValue) => _lifeSlider.value = lifeValue;
 }
