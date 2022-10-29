@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c3ccb113237f60248b1d8651ec4081e1
+guid: 1c6818d43c455b8489da3d53c6c93aa4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "door\u3000Green_0"
+      name: Metal floor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c119b650991b5054aa75930072e629b1
+      internalID: 728741432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal floor_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 140
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a549ebd7df1634c96c6f937c739090
+      internalID: 1532230190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal floor_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 140
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5144344cebecf48a11dabfe2d74461
+      internalID: 1796541873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal floor_3
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccb0731cea2c88b4b9290c0c278f247b
-      internalID: -231714193
+      spriteID: df6db818809dbfe4590b70ddde7613f9
+      internalID: -463115387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "door\u3000Green_1"
+      name: Metal floor_4
       rect:
         serializedVersion: 2
         x: 70
@@ -139,14 +202,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24d923546f874d049897ce0c04be63a3
-      internalID: 1149728113
+      spriteID: fd097332594c3794490f93a5b49d20f8
+      internalID: 1577365529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "door\u3000Green_2"
+      name: Metal floor_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 70
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8722dfaeb2d6a7a4686200cc78e08906
+      internalID: -716872614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal floor_6
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bae05af0421814449a460df08c448e53
-      internalID: 27262118
+      spriteID: cb062c747ff65c34b913538636483420
+      internalID: -439434569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "door\u3000Green_3"
+      name: Metal floor_7
       rect:
         serializedVersion: 2
         x: 70
@@ -181,8 +265,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2df679e594b0bdd499e4bd8960bb431b
-      internalID: 1290645760
+      spriteID: ec6a9890a1a4e134394fd109f4600715
+      internalID: -513698068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Metal floor_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaeef2a9743c634ba7528bdcc583b3a
+      internalID: 569833590
       vertices: []
       indices: 
       edges: []
@@ -198,10 +303,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "door\u3000Green_1": 1149728113
-      "door\u3000Green_3": 1290645760
-      "door\u3000Green_0": -231714193
-      "door\u3000Green_2": 27262118
+      Metal floor_1: 1532230190
+      Metal floor_3: -463115387
+      Metal floor_2: 1796541873
+      Metal floor_6: -439434569
+      Metal floor_7: -513698068
+      Metal floor_4: 1577365529
+      Metal floor_8: 569833590
+      Metal floor_0: 728741432
+      Metal floor_5: -716872614
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

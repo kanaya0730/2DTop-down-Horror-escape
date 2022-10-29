@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9ad986e91062ecd46adf10b524826f2c
+guid: 4c1ec238819d2524c80ae259dde8a187
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: paper cup_0
+      name: "door\u3000Bule_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 40
-        height: 40
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8058c089d2a13a64f8aa9415d7b26522
-      internalID: -2068937909
+      spriteID: 7f24e993c084c1444bb07b9216959897
+      internalID: 1704587586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paper cup_1
+      name: "door\u3000Bule_1"
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 40
-        height: 40
+        x: 70
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 730fff25eed16fd419a50f6a0dcab43a
-      internalID: 1327405664
+      spriteID: dd2cabacb55cfa1419b13aab19b7df96
+      internalID: -1946694658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "door\u3000Bule_2"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae36213e5262b244a7697298cbbb8f1
+      internalID: 87950819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "door\u3000Bule_3"
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef46d8852c8eda4f9db8071103031d1
+      internalID: 1027954990
       vertices: []
       indices: 
       edges: []
@@ -156,8 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      paper cup_0: -2068937909
-      paper cup_1: 1327405664
+      "door\u3000Bule_0": 1704587586
+      "door\u3000Bule_2": 87950819
+      "door\u3000Bule_1": -1946694658
+      "door\u3000Bule_3": 1027954990
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
