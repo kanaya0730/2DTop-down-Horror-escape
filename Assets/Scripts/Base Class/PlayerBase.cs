@@ -10,14 +10,21 @@ using UniRx;
 public class PlayerBase : MonoBehaviour,IDoor
 {
     /// <summary>
+    /// アニメーター
+    /// </summary>
+    Animator _animator;
+
+    /// <summary>
     /// Rigidbody2D(剛体)
     /// </summary>
-    Rigidbody2D _rb2D;
+    Rigidbody2D _rb;
 
     /// <summary>
     /// ポーズカウント
     /// </summary>
     int _pauseCount = 1;
+
+    Vector2 _movement;
 
     [SerializeField]
     [Header("プレイヤーデータ")]
@@ -35,9 +42,11 @@ public class PlayerBase : MonoBehaviour,IDoor
 
     void Start()
     {
+        _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         this.UpdateAsObservable().Subscribe(x => Move());
-        _rb2D = GetComponent<Rigidbody2D>();
         this.UpdateAsObservable().Subscribe(x => PauseResume());
+        this.FixedUpdateAsObservable().Subscribe(x => MovePosition());
         print(_pauseCount);
     }
 
@@ -81,27 +90,50 @@ public class PlayerBase : MonoBehaviour,IDoor
     /// </summary>
     void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        _movement.x = Input.GetAxisRaw("Horizontal");
+        _movement.y = Input.GetAxisRaw("Vertical");
 
-        _rb2D.velocity = new Vector2(x, y) * _speed;
+        _animator.SetBool("IsWalking", _movement != Vector2.zero);
+        if (_movement != Vector2.zero)
+        {
+            _animator.SetFloat("X", _movement.x);
+            _animator.SetFloat("Y", _movement.y);
+        }
+        #region
+        //float x = Input.GetAxisRaw("Horizontal");
+        //float y = Input.GetAxis("Vertical");
 
-        if (x < 0f)
-        {
-            transform.eulerAngles = new Vector3(0f, 0f, 0f);
-        }
-        else if (x > 0f)
-        {
-            transform.eulerAngles = new Vector3(0f, 180f, 0f);
-        }
-        
+        //_rb2D.velocity = new Vector2(x, y).normalized * _speed;
+
+
+
+        //if (x < 0f)
+        //{
+        //    transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        //    _animator.SetBool("Walk", true);
+        //}
+        //else if (x > 0f)
+        //{
+        //    transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        //    _animator.SetBool("Walk",true);
+        //}
+        //else
+        //{
+        //    _animator.SetBool("Walk", false);
+        //}
+        #endregion
+    }
+
+    void MovePosition()
+    {
+        _rb.MovePosition(_rb.position + _movement.normalized * _speed * Time.deltaTime);
     }
 
     /// <summary>
     /// シーンを変える関数
     /// </summary>
     /// <param name="sceneName">遷移したいシーンの名前</param>
-    public void SceneName(Transform sceneName)
+    public void PosChange(Transform sceneName)
     {
         transform.position = sceneName.transform.position;
         print(sceneName.transform.name + "へ移動した");

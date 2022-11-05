@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
     {
         if (collision.TryGetComponent(out IDoor door))
         {
-            door.SceneName(_scenePos);
+            door.PosChange(_scenePos);
             SoundManager.Instance.PlaySFX(SFXType.Door);// 現在はサウンドがないためエラーを吐きますが気にしないでください
         }
     }
