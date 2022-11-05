@@ -24,7 +24,15 @@ public class PlayerBase : MonoBehaviour,IDoor
     /// </summary>
     int _pauseCount = 1;
 
+    /// <summary>
+    /// プレイヤーインプット
+    /// </summary>
     Vector2 _movement;
+
+    /// <summary>
+    /// オブジェクトタイプ
+    /// </summary>
+    ObjectType _objectType;
 
     [SerializeField]
     [Header("プレイヤーデータ")]
@@ -60,21 +68,36 @@ public class PlayerBase : MonoBehaviour,IDoor
         //}
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (_objectType)
+        {
+            case ObjectType.None:
+                print("何も無し");
+                break;
+            case ObjectType.Chair:
+                print("椅子");
+                break;
+            case ObjectType.Ball:
+                print("ボール");
+                break;
+        }
+    }
+
     void PauseResume()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            //SoundManager.Instance.PlaySFX(SFXType.Pause);// 現在音源が入っていないためエラーを吐くのでコメントアウトしておきます。
             switch (_pauseCount)
             {
                 case 1:
-                    SoundManager.Instance.PlaySFX(SFXType.Pause);
                     PauseTime.OnPaused.Subscribe(x => _speed = 0f).AddTo(gameObject);
                     PauseTime.Pause();
                     _pausePanel.gameObject.SetActive(true);
                     break;
 
                 case 2:
-                    SoundManager.Instance.PlaySFX(SFXType.Pause);
                     PauseTime.OnResume.Subscribe(x => _speed = 4.55f).AddTo(gameObject);
                     PauseTime.Resume();
                     _pausePanel.gameObject.SetActive(false);
@@ -99,29 +122,6 @@ public class PlayerBase : MonoBehaviour,IDoor
             _animator.SetFloat("X", _movement.x);
             _animator.SetFloat("Y", _movement.y);
         }
-        #region
-        //float x = Input.GetAxisRaw("Horizontal");
-        //float y = Input.GetAxis("Vertical");
-
-        //_rb2D.velocity = new Vector2(x, y).normalized * _speed;
-
-
-
-        //if (x < 0f)
-        //{
-        //    transform.eulerAngles = new Vector3(0f, 0f, 0f);
-        //    _animator.SetBool("Walk", true);
-        //}
-        //else if (x > 0f)
-        //{
-        //    transform.eulerAngles = new Vector3(0f, 180f, 0f);
-        //    _animator.SetBool("Walk",true);
-        //}
-        //else
-        //{
-        //    _animator.SetBool("Walk", false);
-        //}
-        #endregion
     }
 
     void MovePosition()
