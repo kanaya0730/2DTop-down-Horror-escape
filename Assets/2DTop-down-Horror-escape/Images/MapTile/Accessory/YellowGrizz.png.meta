@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d39271cf7bfc1294ebd1589d8b25bc6a
+guid: 8b38775a15a63c24d9eef17ec5bf41e2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 45
+  spritePixelsToUnits: 35
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,41 +100,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chara-01_0
+      name: YellowGrizz_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 270
-        width: 29
-        height: 72
+        x: 25
+        y: 105
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8ea57a2df020504d8600c669f722016
-      internalID: -1538553949
+      spriteID: 751c9a22e20e9244ab25b6e3768b0a10
+      internalID: -1967254248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_1
+      name: YellowGrizz_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 267
-        width: 29
-        height: 72
+        x: 60
+        y: 105
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8da09b291c9c8da4495d542bb02386c7
-      internalID: 511750070
+      spriteID: 5bf8c994c4f96b5478da85d87cc29f4d
+      internalID: 1752029569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_2
+      name: YellowGrizz_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 268
-        width: 29
-        height: 72
+        x: 95
+        y: 0
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38fa8e6c8d0699e418aafd12e9e2c387
-      internalID: 801114324
+      spriteID: e088383758a06604e9dc1ae335402396
+      internalID: 464780070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_3
+      name: YellowGrizz_3
       rect:
         serializedVersion: 2
-        x: 35
-        y: 185
-        width: 29
-        height: 72
+        x: 25
+        y: 70
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f86985776b9d1a94dae77dc4aa97ed9a
-      internalID: 578833286
+      spriteID: db5426edd53402e4bbe2a0b8ac019978
+      internalID: 1996424649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_4
+      name: YellowGrizz_4
       rect:
         serializedVersion: 2
-        x: 2
-        y: 185
-        width: 29
-        height: 72
+        x: 60
+        y: 70
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cf34e52f37cb74498b115c57f6679eb
-      internalID: -2116789229
+      spriteID: 9015c8ed98fe47846b8b23ee6562afcd
+      internalID: -1959719196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_5
+      name: YellowGrizz_7
       rect:
         serializedVersion: 2
-        x: 65
-        y: 185
-        width: 29
-        height: 72
+        x: 25
+        y: 35
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f63f98b86d0b4454da6e60479bc4eedf
-      internalID: 1190542869
+      spriteID: c2cdaddc7882c514c810c6a87bd279ba
+      internalID: 1687635936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_6
+      name: YellowGrizz_8
       rect:
         serializedVersion: 2
-        x: 33
-        y: 106
-        width: 29
-        height: 72
+        x: 60
+        y: 35
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4170a19d6d963cd45b3007ee0af9a1b4
-      internalID: -1160545101
+      spriteID: a48645cb745eba14db49a3baa52d3eaf
+      internalID: 132769174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_7
+      name: YellowGrizz_10
       rect:
         serializedVersion: 2
-        x: 66
-        y: 106
-        width: 29
-        height: 72
+        x: 25
+        y: 0
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eac339c9a63e5074abf70f01eb5587af
-      internalID: 241410048
+      spriteID: 0b9f4ab6e44d1ef41806920279bd1894
+      internalID: 1164069100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_8
+      name: YellowGrizz_11
       rect:
         serializedVersion: 2
-        x: 3
-        y: 106
-        width: 29
-        height: 72
+        x: 60
+        y: 0
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a113d983d407bd44585498deb4143db9
-      internalID: 1161960917
+      spriteID: 2ed05a82bd3e96d47ab40b92f9716716
+      internalID: 663325213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_9
+      name: YellowGrizz_5
       rect:
         serializedVersion: 2
-        x: 35
-        y: 25
-        width: 29
-        height: 72
+        x: 95
+        y: 35
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,20 +307,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ecc1835a229aa84687e27aca15e62ae
-      internalID: -707913770
+      spriteID: e29ac9dcf5e664d4d92883a70b1e6b19
+      internalID: -438250504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara-01_10
+      name: YellowGrizz_6
       rect:
         serializedVersion: 2
-        x: 67
-        y: 23
-        width: 29
-        height: 72
+        x: 95
+        y: 70
+        width: 35
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,29 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62e22d6e44cc12946b0799388a034888
-      internalID: 108574380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chara-01_11
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 23
-        width: 29
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ae46a0cec614d04289bfaf3a5fefd93
-      internalID: 1914074698
+      spriteID: 611604915d6a99c468b1982b302acff6
+      internalID: -268986570
       vertices: []
       indices: 
       edges: []
@@ -390,18 +345,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chara-01_3: 578833286
-      Chara-01_8: 1161960917
-      Chara-01_5: 1190542869
-      Chara-01_1: 511750070
-      Chara-01_2: 801114324
-      Chara-01_6: -1160545101
-      Chara-01_9: -707913770
-      Chara-01_7: 241410048
-      Chara-01_10: 108574380
-      Chara-01_4: -2116789229
-      Chara-01_11: 1914074698
-      Chara-01_0: -1538553949
+      YellowGrizz_5: -438250504
+      YellowGrizz_4: -1959719196
+      YellowGrizz_10: 1164069100
+      YellowGrizz_8: 132769174
+      YellowGrizz_0: -1967254248
+      YellowGrizz_3: 1996424649
+      YellowGrizz_9: 1510084168
+      YellowGrizz_11: 663325213
+      YellowGrizz_13: 46453682
+      YellowGrizz_2: 464780070
+      YellowGrizz_7: 1687635936
+      YellowGrizz_1: 1752029569
+      YellowGrizz_12: 1224485252
+      YellowGrizz_6: -268986570
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
