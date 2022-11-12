@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+/// <summary>タイトル画面のUI</summary>
+public class TitleUI : MonoBehaviour
 {
     [SerializeField]
+    [Header("操作説明画面")]
     GameObject _controlPanel;
 
-    void Update()
-    {
-
-    }
+    /// <summary>パネルを非表示</summary>
     public void OffPanel() => _controlPanel.SetActive(false);
+
+    /// <summary>パネルを表示</summary>
     public void OnPanel() => _controlPanel.SetActive(true);
 }
