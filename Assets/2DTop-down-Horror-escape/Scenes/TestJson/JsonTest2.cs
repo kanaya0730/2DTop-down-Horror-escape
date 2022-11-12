@@ -29,155 +29,68 @@ public class JsonTest2 : MonoBehaviour
     }
 
 
-    /*
-    public void SavePlayerData()
-    {
-        StreamWriter writer;
-        //var playerName = inputArea.text;
-        //myData.playerName = playerName;
 
-        string jsonstr = JsonUtility.ToJson(myData);
-
-        writer = new StreamWriter(Application.dataPath + "/save" + playerName + ".json", false);
-        writer.Write(jsonstr);
-        writer.Flush();
-        writer.Close();
-    }
-    */
-
-    /*
-    public void LoadPlayerData()
-    {
-        string datastr = "";
-        //var playerName = inputArea.text;
-        StreamReader reader;
-
-        reader = new StreamReader(Application.dataPath + "/save" + playerName + ".json");
-        datastr = reader.ReadToEnd();
-        reader.Close();
-
-        myData = JsonUtility.FromJson<PlayerData>(datastr); // ロードしたデータで上書き
-        Debug.Log(myData.playerName + "のデータをロードしました");
-        counterText.text = myData.clickCount.ToString();
-    }
-*/
-
-
-    public void SavePlayerDataToSave1()
+    public void SavePlayerDataToSaveNum(int Num)
     {
         StreamWriter writer;
 
         string jsonstr = JsonUtility.ToJson(myData);
 
-        writer = new StreamWriter(Application.dataPath + "/save1.json", false);
-        writer.Write(jsonstr);
-        writer.Flush();
-        writer.Close();
-        saveLoadMessageText.text = "セーブデータ1にデータをセーブしました";
-    }
-
-    public void LoadPlayerDataFromSave1()
-    {
-        string datastr = "";
-        //var playerName = inputArea.text;
-        StreamReader reader;
-
-        reader = new StreamReader(Application.dataPath + "/save1.json");
-        datastr = reader.ReadToEnd();
-        reader.Close();
-
-        myData = JsonUtility.FromJson<PlayerData>(datastr); // ロードしたデータで上書き
-        Debug.Log("save1のデータをロードしました");
-        saveLoadMessageText.text = "セーブデータ1のデータをロードしました";
-        counterText.text = myData.clickCount.ToString();
-        HideLoadPanel();
-    }
-
-    public void SavePlayerDataToSave2()
-    {
-        StreamWriter writer;
-
-        string jsonstr = JsonUtility.ToJson(myData);
-
-        writer = new StreamWriter(Application.dataPath + "/save2.json", false);
-        writer.Write(jsonstr);
-        writer.Flush();
-        writer.Close();
-        saveLoadMessageText.text = "セーブデータ2にデータをセーブしました";
-    }
-
-    public void LoadPlayerDataFromSave2()
-    {
-        string datastr = "";
-        //var playerName = inputArea.text;
-        StreamReader reader;
-
-        reader = new StreamReader(Application.dataPath + "/save2.json");
-        datastr = reader.ReadToEnd();
-        reader.Close();
-
-        myData = JsonUtility.FromJson<PlayerData>(datastr); // ロードしたデータで上書き
-        Debug.Log("save2のデータをロードしました");
-        saveLoadMessageText.text = "セーブデータ2のデータをロードしました";
-        counterText.text = myData.clickCount.ToString();
-        HideLoadPanel();
-    }
-
-    public void SavePlayerDataToSave3()
-    {
-        StreamWriter writer;
-
-        string jsonstr = JsonUtility.ToJson(myData);
-
-        writer = new StreamWriter(Application.dataPath + "/save3.json", false);
+        writer = new StreamWriter(Application.dataPath + "/save"+ Num +".json", false);
         writer.Write(jsonstr);
         writer.Flush();
         writer.Close();
 
-        saveLoadMessageText.text = "セーブデータ3にデータをセーブしました";
+        saveLoadMessageText.text = "セーブデータ" + Num + "にデータをセーブしました";
     }
 
-    public void LoadPlayerDataFromSave3()
+    public void LoadPlayerDataFromSaveNum(int Num)
     {
         string datastr = "";
-        //var playerName = inputArea.text;
         StreamReader reader;
 
-        reader = new StreamReader(Application.dataPath + "/save3.json");
+        reader = new StreamReader(Application.dataPath + "/save" + Num + ".json");
         datastr = reader.ReadToEnd();
         reader.Close();
 
         myData = JsonUtility.FromJson<PlayerData>(datastr); // ロードしたデータで上書き
-        Debug.Log("save3のデータをロードしました");
-        saveLoadMessageText.text = "セーブデータ3のデータをロードしました";
+        Debug.Log("save" + Num + "のデータをロードしました");
+        saveLoadMessageText.text = "セーブデータ" + Num + "のデータをロードしました";
         counterText.text = myData.clickCount.ToString();
-        HideLoadPanel();
+        ShowOrHideLoadPanel();
     }
 
-    public void ShowSavePanel()
+
+
+
+
+    public void ShowOrHideSavePanel()
     {
-        savePanel.SetActive (true);
+        if (savePanel.activeInHierarchy)
+        {
+            savePanel.SetActive(false);
+            //表示されてたら非表示
+        }
+        else
+        {
+            savePanel.SetActive(true);
+            //非表示だったら表示
+        }
+        
     }
 
-    public void HideSavePanel()
+    public void ShowOrHideLoadPanel()
     {
-        savePanel.SetActive(false);
+        if (loadPanel.activeInHierarchy)
+        {
+            loadPanel.SetActive(false);
+            //表示されてたら非表示
+        }
+        else
+        {
+            loadPanel.SetActive(true);
+            //非表示だったら表示
+        }
+
     }
-
-    public void ShowLoadPanel()
-    {
-        loadPanel.SetActive(true);
-    }
-
-    public void HideLoadPanel()
-    {
-        loadPanel.SetActive(false);
-    }
-
-
-    public void MADADESU()
-    {
-        Debug.Log("まだ待ってて！未実装！");
-    }
-
 }
