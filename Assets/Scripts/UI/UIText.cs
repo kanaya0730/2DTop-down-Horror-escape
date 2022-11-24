@@ -35,6 +35,7 @@ public class UIText : MonoBehaviour
         return false;
     }
 
+    /// <summary>名前とセリフをテキストに反映</summary>
     public void DrawText(string name, string text)
     {
         _nameText.text = name;

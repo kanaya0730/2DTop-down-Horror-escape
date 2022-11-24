@@ -3,6 +3,7 @@ using UnityEngine;
 /// <summary>ƒ^ƒCƒgƒ‹‰æ–Ê‚ÌUI</summary>
 public class TitleUI : MonoBehaviour
 {
+    /// <summary>‘€ìà–¾‰æ–Ê</summary>
     [SerializeField]
     [Header("‘€ìà–¾‰æ–Ê")]
     GameObject _controlPanel;

@@ -1,49 +1,62 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>ƒLƒƒƒ‰‚ÌØ‚è‘Ö‚¦</summary>
+/// <summary>ã‚­ãƒ£ãƒ©ã®åˆ‡ã‚Šæ›¿ãˆ</summary>
 public class CharChange : MonoBehaviour
 {
+    /// <summary>åˆ‡ã‚Šæ›¿ãˆå¯èƒ½ã‚­ãƒ£ãƒ©</summary>
     [SerializeField]
-    [Header("Ø‚è‘Ö‚¦‰Â”\ƒLƒƒƒ‰")]
+    [Header("åˆ‡ã‚Šæ›¿ãˆå¯èƒ½ã‚­ãƒ£ãƒ©")]
     List<Sprite> _playerData = new List<Sprite>();
-    
+
     [SerializeField]
-    [Header("ƒXƒvƒ‰ƒCƒgƒŒƒ“ƒ_ƒ‰[")]
+    [Header("ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆãƒ¬ãƒ³ãƒ€ãƒ©ãƒ¼")]
     SpriteRenderer _rend;
 
-    /// <summary>ƒLƒƒƒ‰ƒiƒ“ƒo[</summary>
-    int _num = 0; 
+    [SerializeField]
+    [Header("è¿½åŠ ã‚­ãƒ£ãƒ©")]
+    Sprite _char;
 
+    /// <summary>ã‚­ãƒ£ãƒ©No.</summary>
+    int _num = 0;
+
+    bool _playChar = false;
     void Start() => _rend = GetComponent<SpriteRenderer>();
 
     void Update()
     {
-        //EƒL[‚ğ‰Ÿ‚µ‚½‚Æ‚«
+        //Eã‚­ãƒ¼ã‚’æŠ¼ã—ãŸã¨ã
         if(Input.GetKeyDown(KeyCode.E))
         {
             _num++;
         }
 
-        //_num = Œ»İ‚ÌƒLƒƒƒ‰
+        //Qã‚­ãƒ¼ã§ã‚­ãƒ£ãƒ©ã‚’è¿½åŠ 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            AddChar(_char);
+            _playChar = true;
+        }
+
+        //_num = ç¾åœ¨ã®ã‚­ãƒ£ãƒ©
         switch (_num)
         {
             case 0:
             case 1:
-            case 2:
-                Debug.Log($"ƒLƒƒƒ‰‚ğ{_num}”Ô‚ÉØ‚è‘Ö‚¦‚½");
                 _rend.sprite = _playerData[_num];
-                if (_playerData[_num] == null) _num = 0;
+                break;
+            case 2:
+                Debug.Log($"ã‚­ãƒ£ãƒ©ã‚’{_num}ç•ªã«åˆ‡ã‚Šæ›¿ãˆãŸ");
+                if (_playChar == false) _num = 0;
+                _rend.sprite = _playerData[_num];
                 break;
             default:
                 _num = 0;
                 break;
         }
-
     }
 
-    /// <summary>“r’†‚ÅƒLƒƒƒ‰‚ğ’Ç‰Á</summary>
-    /// <param name="sprite"></param>
+    /// <summary>é€”ä¸­ã§ã‚­ãƒ£ãƒ©ã‚’è¿½åŠ </summary>
     public void AddChar(Sprite sprite) => _playerData.Add(sprite);
 }

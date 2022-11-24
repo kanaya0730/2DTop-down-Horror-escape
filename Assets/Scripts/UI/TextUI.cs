@@ -9,10 +9,12 @@ public class TextUI : MonoBehaviour
     /// <summary>CSVデータの保存場所</summary>
     List<string[]> _csvData = new List<string[]>();
 
+    /// <summary>シナリオデータ</summary>
     [SerializeField]
     [Header("シナリオデータ")]
     TextAsset _textFail;
 
+    /// <summary>UITextスクリプト</summary>
     [SerializeField]
     [Header("UITextスクリプト")]
     UIText _uitext;
@@ -22,6 +24,9 @@ public class TextUI : MonoBehaviour
 
     /// <summary>イベントフラグ</summary>
     bool _eventflag = false;
+
+    /// <summary>イベント名</summary>
+    string _eventName;
 
     void Start() => LoadCSV();
 
@@ -44,7 +49,6 @@ public class TextUI : MonoBehaviour
     {
         while (_uitext.Playing) yield return null;
         while (!_uitext.IsClicked()) yield return null;
-
     }
 
     /// <summary>CSVを上から一行ずつ出力</summary>
@@ -68,7 +72,23 @@ public class TextUI : MonoBehaviour
         //イベントフラグが立っている場合
         else
         {
-            //イベントの処理
+            switch (_eventName/*なんのイベントフラグが立っているか*/)
+            {
+                //イベントの種類
+                case "0":
+                    //イベントの処理:0
+                    break;
+                case "1":
+                    //イベントの処理:1
+                    break;
+                case "2":
+                    //イベントの処理:2
+                    break;
+                case "3":
+                    //イベントの処理:3
+                    break;
+
+            }
         }
     }
 }
