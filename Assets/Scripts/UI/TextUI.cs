@@ -91,4 +91,31 @@ public class TextUI : MonoBehaviour
             }
         }
     }
+    public void CharCheck()
+    {
+        switch (_eventName/*なんのイベントフラグが立っているか*/)
+        {
+            //イベントの種類
+            case "0":
+                //イベントの処理:0
+                break;
+            case "1":
+                //イベントの処理:1
+                break;
+            case "2":
+                //イベントの処理:2
+                break;
+            case "3":
+                //イベントの処理:3
+                break;
+
+        }
+    }
+
+    /// <summary>鉄の扉を調べる（ハロー入手前）</summary>
+    public void ItemCheck()
+    {
+        _textID = 71 - 1;
+        StartCoroutine(Cotext());
+    }
 }

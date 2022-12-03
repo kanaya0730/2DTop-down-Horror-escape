@@ -47,7 +47,6 @@ public class CharChange : MonoBehaviour
                 _rend.sprite = _playerData[_num];
                 break;
             case 2:
-                Debug.Log($"キャラを{_num}番に切り替えた");
                 if (_playChar == false) _num = 0;
                 _rend.sprite = _playerData[_num];
                 break;
