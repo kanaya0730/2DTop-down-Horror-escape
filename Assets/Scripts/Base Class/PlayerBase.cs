@@ -29,11 +29,6 @@ public class PlayerBase : MonoBehaviour,IDoor
     /// </summary>
     Vector2 _movement;
 
-    /// <summary>
-    /// オブジェクトタイプ
-    /// </summary>
-    ObjectType _objectType;
-
     [SerializeField]
     [Header("プレイヤーデータ")]
     PlayerData _playerData;
@@ -46,8 +41,6 @@ public class PlayerBase : MonoBehaviour,IDoor
     [Header("ポーズパネル")]
     Image _pausePanel;
 
-
-
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -55,7 +48,7 @@ public class PlayerBase : MonoBehaviour,IDoor
         this.UpdateAsObservable().Subscribe(x => Move());
         this.UpdateAsObservable().Subscribe(x => PauseResume());
         this.FixedUpdateAsObservable().Subscribe(x => MovePosition());
-        print(_pauseCount);
+        //print(_pauseCount);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -68,19 +61,11 @@ public class PlayerBase : MonoBehaviour,IDoor
         //}
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        switch (_objectType)
+        if (collision.TryGetComponent(out IObject anyObj))
         {
-            case ObjectType.None:
-                print("何も無し");
-                break;
-            case ObjectType.Chair:
-                print("椅子");
-                break;
-            case ObjectType.Ball:
-                print("ボール");
-                break;
+            anyObj.AnyObject();
         }
     }
 
@@ -137,5 +122,12 @@ public class PlayerBase : MonoBehaviour,IDoor
     {
         transform.position = sceneName.transform.position;
         print(sceneName.transform.name + "へ移動した");
+    }
+
+    void TestCheck()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+        }
     }
 }
