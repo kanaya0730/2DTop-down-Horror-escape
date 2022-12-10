@@ -66,6 +66,7 @@ public class PlayerBase : MonoBehaviour,IDoor
         if (collision.TryGetComponent(out IObject anyObj))
         {
             anyObj.AnyObject();
+            collision.gameObject.SetActive(false);
         }
     }
 
@@ -122,12 +123,5 @@ public class PlayerBase : MonoBehaviour,IDoor
     {
         transform.position = sceneName.transform.position;
         print(sceneName.transform.name + "‚ÖˆÚ“®‚µ‚½");
-    }
-
-    void TestCheck()
-    {
-        if (Input.GetKey(KeyCode.Space))
-        {
-        }
     }
 }
