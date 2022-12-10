@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
 
     const string TITLE_SCENE_NAME = "Title";
-    const string GAME_SCENE_NAME = "Game";
+    const string GAME_SCENE_NAME = "GameScene";
 
     AudioSource _audioSource;
 
