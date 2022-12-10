@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>CSV管理</summary>
 public class TextUI : MonoBehaviour
@@ -18,6 +19,16 @@ public class TextUI : MonoBehaviour
     [SerializeField]
     [Header("UITextスクリプト")]
     UIText _uitext;
+
+    /// <summary>キャライラスト一覧</summary>
+    [SerializeField]
+    [Header("キャライラスト一覧")]
+    Sprite[] _allChar;
+
+    /// <summary>キャライラスト</summary>
+    [SerializeField]
+    [Header("キャライラスト")]
+    Image _charSprite;
 
     /// <summary>現在の行数</summary>
     int _textID = 1;
@@ -63,6 +74,27 @@ public class TextUI : MonoBehaviour
         EventCheck();
     }
 
+    public void Update()
+    {
+        switch (_csvData[_textID][0]/*キャラNo.*/)
+        {
+            //キャラの種類
+            case "0":
+                //キャラNo.0
+                _charSprite.sprite = _allChar[0];
+                break;
+            case "1":
+                //キャラNo.1
+                _charSprite.sprite = _allChar[1];
+                break;
+            case "2":
+                //キャラNo.2
+                _charSprite.sprite = _allChar[2];
+                break;
+
+        }
+    }
+
     /// <summary>イベントフラグ確認</summary>
     public void EventCheck()
     {
@@ -89,26 +121,6 @@ public class TextUI : MonoBehaviour
                     break;
 
             }
-        }
-    }
-    public void CharCheck()
-    {
-        switch (_eventName/*なんのイベントフラグが立っているか*/)
-        {
-            //イベントの種類
-            case "0":
-                //イベントの処理:0
-                break;
-            case "1":
-                //イベントの処理:1
-                break;
-            case "2":
-                //イベントの処理:2
-                break;
-            case "3":
-                //イベントの処理:3
-                break;
-
         }
     }
 

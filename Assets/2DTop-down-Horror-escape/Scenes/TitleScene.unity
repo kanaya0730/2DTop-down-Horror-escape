@@ -1088,7 +1088,7 @@ GameObject:
   - component: {fileID: 1184281455}
   - component: {fileID: 1184281454}
   m_Layer: 5
-  m_Name: Button (Legacy)_1
+  m_Name: Controll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1356,7 +1356,7 @@ GameObject:
   - component: {fileID: 1705818012}
   - component: {fileID: 1705818011}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1545,6 +1545,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891069463}
   m_CullTransparentMesh: 1
+--- !u!114 &2038289695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 728091305670011521, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+  m_PrefabInstance: {fileID: 728091305009659367}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &728091305009659367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1552,6 +1563,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 298370547}
     m_Modifications:
+    - target: {fileID: 728091305193862410, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+      propertyPath: _charSprite
+      value: 
+      objectReference: {fileID: 2038289695}
+    - target: {fileID: 728091305193862410, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+      propertyPath: _allChar.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 728091305193862410, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+      propertyPath: _allChar.Array.data[0]
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 1e592e8b9d1fe1145bc9e098452b6039, type: 3}
+    - target: {fileID: 728091305193862410, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+      propertyPath: _allChar.Array.data[1]
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: 68e87e4c94cdf0f47abce7a504042337, type: 3}
+    - target: {fileID: 728091305193862410, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+      propertyPath: _allChar.Array.data[2]
+      value: 
+      objectReference: {fileID: -9095717837082945937, guid: a9e85019c9967664290f163b3598dc38, type: 3}
     - target: {fileID: 728091305193862412, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1599,6 +1630,18 @@ PrefabInstance:
     - target: {fileID: 728091305193862413, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
       propertyPath: m_Name
       value: TextUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 728091305193862413, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728091305670011521, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728091305670011521, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04f7cfea1b970bf47bd23b465156f5f6, type: 3}

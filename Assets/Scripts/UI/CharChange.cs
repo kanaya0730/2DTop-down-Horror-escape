@@ -32,7 +32,7 @@ public class CharChange : MonoBehaviour
             _num++;
         }
 
-        //Qキーでキャラを追加
+        //Qキーでキャラを追加(テスト用)
         if (Input.GetKeyDown(KeyCode.Q))
         {
             AddChar(_char);
