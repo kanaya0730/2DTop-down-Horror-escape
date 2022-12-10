@@ -17,6 +17,7 @@ public class button : MonoBehaviour
     void Start()
     {
         //デバッグログは基本消して構わない
+        //自分が忘れそうだったから書いた
         //Debug logs can basically be deleted
         Debug.Log("三色の扉がある…");
         Debug.Log("真ん中の扉には「特定の順番で叩けよ」と書いてある張り紙が貼ってある");
@@ -91,5 +92,6 @@ public class button : MonoBehaviour
         //burn in hell
         //you are really stupid
         //Can you go by defeating about 10 bodies by yourself?
+        //落書き。
     }
 }
