@@ -14,6 +14,8 @@ public class SoundManager : MonoBehaviour
 
     AudioSource _audioSource;
 
+    
+
     [SerializeField]
     [Header("Œø‰Ê‰¹Œn")]
     SoundSFX[] _soundSFX;

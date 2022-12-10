@@ -10,14 +10,24 @@ using UniRx;
 public class PlayerBase : MonoBehaviour,IDoor
 {
     /// <summary>
+    /// アニメーター
+    /// </summary>
+    Animator _animator;
+
+    /// <summary>
     /// Rigidbody2D(剛体)
     /// </summary>
-    Rigidbody2D _rb2D;
+    Rigidbody2D _rb;
 
     /// <summary>
     /// ポーズカウント
     /// </summary>
     int _pauseCount = 1;
+
+    /// <summary>
+    /// プレイヤーインプット
+    /// </summary>
+    Vector2 _movement;
 
     [SerializeField]
     [Header("プレイヤーデータ")]
@@ -31,14 +41,18 @@ public class PlayerBase : MonoBehaviour,IDoor
     [Header("ポーズパネル")]
     Image _pausePanel;
 
-
+    [SerializeField]
+    [Header("UIManager")]
+    UIManager _uiManager;
 
     void Start()
     {
+        _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         this.UpdateAsObservable().Subscribe(x => Move());
-        _rb2D = GetComponent<Rigidbody2D>();
         this.UpdateAsObservable().Subscribe(x => PauseResume());
-        print(_pauseCount);
+        this.FixedUpdateAsObservable().Subscribe(x => MovePosition());
+        //print(_pauseCount);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -51,21 +65,30 @@ public class PlayerBase : MonoBehaviour,IDoor
         //}
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out IObject anyObj))
+        {
+            anyObj.AnyObject();
+            _uiManager.LogText.text = "○○ゲットした";
+            collision.gameObject.SetActive(false);
+        }
+    }
+
     void PauseResume()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            //SoundManager.Instance.PlaySFX(SFXType.Pause);// 現在音源が入っていないためエラーを吐くのでコメントアウトしておきます。
             switch (_pauseCount)
             {
                 case 1:
-                    SoundManager.Instance.PlaySFX(SFXType.Pause);
-                    PauseTime.OnPaused.Subscribe(x => _speed = 0f).AddTo(gameObject);
+                    PauseTime.OnPaused.Subscribe(x => _speed = 4.55f).AddTo(gameObject);
                     PauseTime.Pause();
                     _pausePanel.gameObject.SetActive(true);
                     break;
 
                 case 2:
-                    SoundManager.Instance.PlaySFX(SFXType.Pause);
                     PauseTime.OnResume.Subscribe(x => _speed = 4.55f).AddTo(gameObject);
                     PauseTime.Resume();
                     _pausePanel.gameObject.SetActive(false);
@@ -81,27 +104,27 @@ public class PlayerBase : MonoBehaviour,IDoor
     /// </summary>
     void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        _movement.x = Input.GetAxisRaw("Horizontal");
+        _movement.y = Input.GetAxisRaw("Vertical");
 
-        _rb2D.velocity = new Vector2(x, y) * _speed;
+        _animator.SetBool("IsWalking", _movement != Vector2.zero);
+        if (_movement != Vector2.zero)
+        {
+            _animator.SetFloat("X", _movement.x);
+            _animator.SetFloat("Y", _movement.y);
+        }
+    }
 
-        if (x < 0f)
-        {
-            transform.eulerAngles = new Vector3(0f, 0f, 0f);
-        }
-        else if (x > 0f)
-        {
-            transform.eulerAngles = new Vector3(0f, 180f, 0f);
-        }
-        
+    void MovePosition()
+    {
+        _rb.MovePosition(_rb.position + _movement.normalized * _speed * Time.deltaTime);
     }
 
     /// <summary>
     /// シーンを変える関数
     /// </summary>
     /// <param name="sceneName">遷移したいシーンの名前</param>
-    public void SceneName(Transform sceneName)
+    public void PosChange(Transform sceneName)
     {
         transform.position = sceneName.transform.position;
         print(sceneName.transform.name + "へ移動した");
