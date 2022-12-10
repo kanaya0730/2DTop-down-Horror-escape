@@ -41,6 +41,10 @@ public class PlayerBase : MonoBehaviour,IDoor
     [Header("ポーズパネル")]
     Image _pausePanel;
 
+    [SerializeField]
+    [Header("UIManager")]
+    UIManager _uiManager;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -66,6 +70,7 @@ public class PlayerBase : MonoBehaviour,IDoor
         if (collision.TryGetComponent(out IObject anyObj))
         {
             anyObj.AnyObject();
+            _uiManager.LogText.text = "○○ゲットした";
             collision.gameObject.SetActive(false);
         }
     }
@@ -78,7 +83,7 @@ public class PlayerBase : MonoBehaviour,IDoor
             switch (_pauseCount)
             {
                 case 1:
-                    PauseTime.OnPaused.Subscribe(x => _speed = 0f).AddTo(gameObject);
+                    PauseTime.OnPaused.Subscribe(x => _speed = 4.55f).AddTo(gameObject);
                     PauseTime.Pause();
                     _pausePanel.gameObject.SetActive(true);
                     break;
