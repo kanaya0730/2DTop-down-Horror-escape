@@ -71,8 +71,15 @@ public class PlayerBase : MonoBehaviour,IDoor
         {
             anyObj.AnyObject();
             _uiManager.LogText.text = "››ƒQƒbƒg‚µ‚½";
+            StartCoroutine(TextNull());
             collision.gameObject.SetActive(false);
         }
+    }
+
+    IEnumerator TextNull()
+    {
+        yield return new WaitForSeconds(1f);
+        _uiManager.LogText.text = null;
     }
 
     void PauseResume()
