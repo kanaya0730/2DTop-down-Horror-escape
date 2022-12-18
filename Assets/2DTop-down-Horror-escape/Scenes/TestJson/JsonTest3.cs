@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.IO;
 
-public class JsonTest2 : MonoBehaviour
+public class JsonTest3 : MonoBehaviour
 {
     [SerializeField] [Header("カウント用のテキスト")] Text counterText;
     [SerializeField] [Header("セーブ用パネル")] GameObject savePanel;
@@ -15,7 +15,6 @@ public class JsonTest2 : MonoBehaviour
     [System.Serializable]
     public class PlayerData
     {
-        public int clickCount;
         public Vector3 savedPlace;
 
         [Header("柴崎新の残り体力")] public int hp_Shibasaki;
@@ -25,17 +24,19 @@ public class JsonTest2 : MonoBehaviour
         public List<bool> flags; //物語を進めるうえでのフラグ
         public List<string> items; //所持アイテムリスト？
 
-        public bool isRecordBroken;
+        public bool isRecordBroken;//レコードが壊れたかのフラグ
     }
 
     PlayerData myData = new PlayerData();
 
+    /*
     /// <summary>クリック時に+1</summary>
     public void OnClickEvent()
     {
         myData.clickCount++;
         counterText.text = myData.clickCount.ToString();
     }
+    */
 
 
     /// <summary>数次式でセーブデータにセーブ</summary>
@@ -73,7 +74,7 @@ public class JsonTest2 : MonoBehaviour
         myData = JsonUtility.FromJson<PlayerData>(datastr); // ロードしたデータで上書き
         Debug.Log("save" + Num + "のデータをロードしました");
         saveLoadMessageText.text = "セーブデータ" + Num + "のデータをロードしました";
-        counterText.text = myData.clickCount.ToString();
+        //counterText.text = myData.clickCount.ToString();
         ShowOrHideLoadPanel();
     }
 
@@ -116,7 +117,7 @@ public class JsonTest2 : MonoBehaviour
         myData = JsonUtility.FromJson<PlayerData>(datastr); // ロードしたデータで上書き
         Debug.Log(Str + "のデータをロードしました");
         saveLoadMessageText.text = Str + "のデータをロードしました";
-        counterText.text = myData.clickCount.ToString();
+        //counterText.text = myData.clickCount.ToString();
         ShowOrHideLoadPanel();
     }
 

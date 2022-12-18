@@ -26,9 +26,9 @@ public class Door : MonoBehaviour
         if (collision.TryGetComponent(out IDoor door) && !_isKey)
         {
             door.PosChange(_scenePos);
-            SoundManager.Instance.PlaySFX(SFXType.Door);// 現在はサウンドがないためエラーを吐きますが気にしないでください
+            //SoundManager.Instance.PlaySFX(SFXType.Door);// 現在はサウンドがないためエラーを吐きますが気にしないでください
         }
-        else if (_isKey && collision.gameObject.tag == _keyName)
+        else if (_isKey)// 鍵を使用したときの処理
         {
             print("鍵を使用しました");
         }
