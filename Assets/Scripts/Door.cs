@@ -30,6 +30,7 @@ public class Door : MonoBehaviour
         }
         else if (_isKey)// 鍵を使用したときの処理
         {
+            door.PosChange(_scenePos);
             print("鍵を使用しました");
         }
         else

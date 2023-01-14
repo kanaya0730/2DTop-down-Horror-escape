@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     [Header("ログテキスト")]
-    Text _logText;
+    private Text _logText;
 
     void Start()
     {
