@@ -6,6 +6,8 @@ using UnityEngine.UI;
 /// <summary>会話ウィンドウの管理</summary>
 public class UIText : MonoBehaviour
 {
+    public static UIText I = null;
+    
     /// <summary>テキスト判定</summary>
     public bool Playing => _playing;
 

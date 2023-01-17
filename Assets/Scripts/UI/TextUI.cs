@@ -76,6 +76,7 @@ public class TextUI : MonoBehaviour
 
     public void Update()
     {
+       
         switch (_csvData[_textID][0]/*キャラNo.*/)
         {
             //キャラの種類
@@ -91,8 +92,15 @@ public class TextUI : MonoBehaviour
                 //キャラNo.2
                 _charSprite.sprite = _allChar[2];
                 break;
-
         }
+
+        switch (_csvData[_textID][4])
+        {
+            case "終了":
+                SceneLoader.SceneChange("GameScene");
+                break;
+        }
+
     }
 
     /// <summary>イベントフラグ確認</summary>
@@ -119,7 +127,6 @@ public class TextUI : MonoBehaviour
                 case "3":
                     //イベントの処理:3
                     break;
-
             }
         }
     }
