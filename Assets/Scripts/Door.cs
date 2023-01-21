@@ -14,10 +14,6 @@ public class Door : MonoBehaviour
     Transform _scenePos;
 
     [SerializeField]
-    [Header("アイテム")]
-    GameObject _item;
-
-    [SerializeField]
     [Header("鍵の名前")]
     string _keyName;
 
