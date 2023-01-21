@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : PlayerBase
+public interface IKey
 {
-
+    public void OpenDoor(bool isKey);
 }

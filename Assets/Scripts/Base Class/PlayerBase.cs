@@ -41,17 +41,6 @@ public class PlayerBase : MonoBehaviour,IDoor
         this.UpdateAsObservable().Subscribe(x => Move());
         this.UpdateAsObservable().Subscribe(x => PauseResume());
         this.FixedUpdateAsObservable().Subscribe(x => MovePosition());
-        //print(_pauseCount);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // タグを使いたくないのでInterfaceを使いましょう
-        // (例)↓
-        //if (collision.gameObject.TryGetComponent(out IDamage damage))
-        //{
-        //    damage.Damage(_damage);
-        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
