@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Linq;
 using System;
 
 public class SoundManager : MonoBehaviour
@@ -13,8 +12,6 @@ public class SoundManager : MonoBehaviour
     const string GAME_SCENE_NAME = "Game";
 
     AudioSource _audioSource;
-
-    
 
     [SerializeField]
     [Header("効果音系")]
@@ -30,7 +27,6 @@ public class SoundManager : MonoBehaviour
         {
             print("オーディオソースが参照できた");
         }
-
 
         FirstBGM();
     }
