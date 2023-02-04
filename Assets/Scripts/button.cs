@@ -33,7 +33,7 @@ public class button : MonoBehaviour
     void Update()
     {
         if (hoji == 0 && wakaru == 0 && metyawaka == 0) {
-
+            Debug.Log("どの扉を叩こう");
         }
        else if (hoji == 1 && wakaru == 0 && metyawaka == 3) {
             Debug.Log("テスト用　正解1");
@@ -84,7 +84,7 @@ public class button : MonoBehaviour
     }
     private void Acashia() {
         //nothing in particular
-        //is like a logo
+        //is like a log
         //nice folds today
         //flowers are blooming
         //Even the birds are singing
@@ -93,5 +93,11 @@ public class button : MonoBehaviour
         //you are really stupid
         //Can you go by defeating about 10 bodies by yourself?
         //落書き。
+        //あまり気にしないで。
+        //r-@-q=p
+        //|゜゜T
+        //| ~  |＜ほっといテヨ。
+        //!    !
+        // ~~~~~
     }
 }
