@@ -49,6 +49,7 @@ public class PlayerBase : MonoBehaviour,IDoor
         {
             anyObj.AnyObject();
             collision.gameObject.SetActive(false);
+            gameObject.AddComponent<KeyUse>();
         }
     }
 

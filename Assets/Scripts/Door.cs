@@ -12,6 +12,15 @@ public class Door : MonoBehaviour
     [Header("ˆÚ“®‚µ‚½‚¢ƒV[ƒ“‚ÌêŠ‚ğ“ü‚ê‚Ä‚­‚¾‚³‚¢")]
     Transform _scenePos;
 
+    [SerializeField]
+    KeyName _type;
+
+    enum KeyName
+    {
+        Red,
+        Green,
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out IDoor door) && !_isKey)
@@ -22,6 +31,16 @@ public class Door : MonoBehaviour
         else if (collision.TryGetComponent(out IKey key))
         {
             key.OpenDoor(_isKey = false);
+            //switch (_type)
+            //{
+            //    case KeyName.Red:
+
+            //        break;
+
+            //    case KeyName.Green:
+
+            //        break;
+            //}
         }
         else if (_isKey)// Œ®‚ª‚È‚¢‚Æ‚«‚Ìˆ—
         {
