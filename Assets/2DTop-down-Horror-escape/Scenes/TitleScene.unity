@@ -188,6 +188,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0d232af4a99d4ca4989fbe99edcda455, type: 3}
   - {fileID: 21300000, guid: b1aec410f195cbc48950d695c079ed0c, type: 3}
   - {fileID: 21300000, guid: 111cc73e7bbd3e74ab28a4a927c0ac04, type: 3}
+  - {fileID: 7482667652216324306, guid: 1e592e8b9d1fe1145bc9e098452b6039, type: 3}
   _playing: 0
   textSpeed: 0.1
   _pause: 0
@@ -1963,7 +1964,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 38fb69338d588b64ea5f2c219db3056b, type: 3}
-    m_FontSize: 30
+    m_FontSize: 27
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
