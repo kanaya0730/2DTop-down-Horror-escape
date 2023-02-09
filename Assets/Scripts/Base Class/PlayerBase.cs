@@ -4,29 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using UniRx.Triggers;
 using UniRx;
+
 /// <summary>
 /// Playerの動きだけ
 /// </summary>
 public class PlayerBase : MonoBehaviour,IDoor
 {
-    /// <summary>
-    /// アニメーター
-    /// </summary>
+    /// <summary>アニメーター</summary>
     Animator _animator;
 
-    /// <summary>
-    /// Rigidbody2D(剛体)
-    /// </summary>
+    /// <summary>Rigidbody2D(剛体)</summary>
     Rigidbody2D _rb;
 
-    /// <summary>
-    /// ポーズカウント
-    /// </summary>
+    /// <summary>ポーズカウント</summary>
     int _pauseCount = 1;
 
-    /// <summary>
-    /// プレイヤーインプット
-    /// </summary>
+    /// <summary>プレイヤーインプット</summary>
     Vector2 _movement;
 
     [SerializeField]
@@ -40,10 +33,6 @@ public class PlayerBase : MonoBehaviour,IDoor
     [SerializeField]
     [Header("ポーズパネル")]
     Image _pausePanel;
-
-    [SerializeField]
-    [Header("UIManager")]
-    UIManager _uiManager;
 
     void Start()
     {
@@ -70,16 +59,8 @@ public class PlayerBase : MonoBehaviour,IDoor
         if (collision.TryGetComponent(out IObject anyObj))
         {
             anyObj.AnyObject();
-            _uiManager.LogText.text = "○○ゲットした";
-            StartCoroutine(TextNull());
             collision.gameObject.SetActive(false);
         }
-    }
-
-    IEnumerator TextNull()
-    {
-        yield return new WaitForSeconds(1f);
-        _uiManager.LogText.text = null;
     }
 
     void PauseResume()

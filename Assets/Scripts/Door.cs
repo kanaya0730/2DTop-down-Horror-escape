@@ -14,10 +14,6 @@ public class Door : MonoBehaviour
     Transform _scenePos;
 
     [SerializeField]
-    [Header("アイテム")]
-    GameObject _item;
-
-    [SerializeField]
     [Header("鍵の名前")]
     string _keyName;
 
@@ -30,6 +26,7 @@ public class Door : MonoBehaviour
         }
         else if (_isKey)// 鍵を使用したときの処理
         {
+            door.PosChange(_scenePos);
             print("鍵を使用しました");
         }
         else
