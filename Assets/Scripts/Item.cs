@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
+using System;
+using UnityEngine.UI;
 
 public class Item : MonoBehaviour, IObject
 {
@@ -14,15 +17,25 @@ public class Item : MonoBehaviour, IObject
     [Header("UIManager")]
     private UIManager _uiManager;
 
-    public void AnyObject()
+    [SerializeField]
+    [Header("アイテムイメージ")]
+    private Image _itemImage;
+
+    private void Start()
     {
-        StartCoroutine(TextNull());
-        _uiManager.LogText.text = _itemInformation.ItemInformation[_itemNum].ItemName + "をゲットした";
+        _itemImage.gameObject.SetActive(false);
     }
 
-    IEnumerator TextNull()
+    public async void AnyObject()
     {
-        yield return new WaitForSeconds(1f);
-        _uiManager.LogText.text = null;
+        _itemImage.gameObject.SetActive(true);
+        _uiManager.LogText.text = _itemInformation.ItemInformation[_itemNum].ItemName + "をゲットした";
+        await TextNull();
+    }
+
+    private async UniTask TextNull()
+    {
+        await UniTask.Delay(TimeSpan.FromSeconds(1f));
+        _uiManager.LogText.text = "";
     }
 }
