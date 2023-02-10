@@ -34,6 +34,8 @@ public class PlayerBase : MonoBehaviour,IDoor
     [Header("ポーズパネル")]
     Image _pausePanel;
 
+    private bool _isFirst = false;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -60,6 +62,12 @@ public class PlayerBase : MonoBehaviour,IDoor
         {
             anyObj.AnyObject();
             collision.gameObject.SetActive(false);
+
+            if (collision.gameObject.name == "GreenRoomKey_1")
+            {
+                gameObject.AddComponent<KeyUse>();
+                _isFirst = true;
+            }
         }
     }
 
