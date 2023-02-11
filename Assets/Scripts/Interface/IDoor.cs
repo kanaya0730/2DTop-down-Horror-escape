@@ -1,5 +1,5 @@
 using UnityEngine;
 public interface IDoor
 {
-    void SceneName(Transform scenePos);// シーン名
+    void PosChange(Transform scenePos);// シーン名
 }
