@@ -57,5 +57,15 @@ public class CharChange : MonoBehaviour
     }
 
     /// <summary>途中でキャラを追加</summary>
-    public void AddChar(Sprite sprite) => _playerData.Add(sprite);
+    public void AddChar(Sprite sprite)
+    {
+        if (_playChar == false)
+        {
+            _playerData.Add(sprite);
+        }
+        else
+        {
+            Debug.Log("これ以上追加できません");
+        }
+    }
 }

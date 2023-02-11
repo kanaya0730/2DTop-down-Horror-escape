@@ -183,7 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1467734758799021457}
   m_Layer: 0
-  m_Name: TextUI
+  m_Name: MessageWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -34,6 +34,10 @@ public class PlayerBase : MonoBehaviour,IDoor
     [Header("ポーズパネル")]
     Image _pausePanel;
 
+    [SerializeField]
+    [Header("シャドウパネル")]
+    GameObject _shadowPanel;
+
     private bool _isFirst = false;
 
     void Start()
@@ -67,6 +71,12 @@ public class PlayerBase : MonoBehaviour,IDoor
             {
                 gameObject.AddComponent<KeyUse>();
                 _isFirst = true;
+            }
+
+            //追加した。ごめん
+            if (collision.gameObject.name == "GardeningScissors")
+            {
+                _shadowPanel.SetActive(true);
             }
         }
     }
