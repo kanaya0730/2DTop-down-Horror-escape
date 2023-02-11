@@ -160,8 +160,8 @@ public class NovelReader : MonoBehaviour
         if (!_pause)
         {
             Debug.Log($"現在：{_textID}行");
-            DrawImage(int.Parse(_datas[_textID][0]));
-            DrawText(_datas[_textID][1], _datas[_textID][3]); //(名前,セリフ)
+            DrawImage(int.Parse(_datas[_textID][0]));//キャライメージ反映
+            DrawText(_datas[_textID][1], _datas[_textID][3]); //(名前,セリフ)反映
             yield return StartCoroutine(Skip());//クリックで進む
             _textID++; //次の行へ
             StartCoroutine(Cotext());
