@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/2DTop-down-Horror-escape/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/2DTop-down-Horror-escape/Scenes/TitleScene.unity
+    guid: e79d2549229327c4db0b1c1e92a168e7
   - enabled: 1
     path: Assets/2DTop-down-Horror-escape/Scenes/GameScene.unity
     guid: 63e9712b65f226b45bc170d1ed1b0546
+  - enabled: 1
+    path: Assets/2DTop-down-Horror-escape/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/2DTop-down-Horror-escape/Scenes/Map1.unity
     guid: 2e7e5cf9e1252af42961494e02300c65

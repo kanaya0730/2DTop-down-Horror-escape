@@ -52,9 +52,15 @@ public class NovelReader : MonoBehaviour
     bool _pause;
 
     [SerializeField]
+    [Header("読み込むシートのID")]
     string _sheetID = "読み込むシートのID";
     [SerializeField]
+    [Header("読み込むシート")]
     string _sheetName = "読み込むシート";
+
+    [SerializeField]
+    [Header("セリフの切り替わり時間")]
+    float _autoSpan = 2.0f;
 
     private void Awake()
     {
@@ -157,19 +163,22 @@ public class NovelReader : MonoBehaviour
     /// <summary>GSSを上から一行ずつ出力</summary>
     IEnumerator Cotext()
     {
-        if (!_pause)
-        {
-            Debug.Log($"現在：{_textID}行");
-            DrawImage(int.Parse(_datas[_textID][0]));//キャライメージ反映
-            DrawText(_datas[_textID][1], _datas[_textID][3]); //(名前,セリフ)反映
-            yield return StartCoroutine(Skip());//クリックで進む
-            _textID++; //次の行へ
-            StartCoroutine(Cotext());
-        }
+        Debug.Log($"現在：{_textID}行");
+        DrawImage(int.Parse(_datas[_textID][0]));//キャライメージ反映
+        DrawText(_datas[_textID][1], _datas[_textID][3]); //(名前,セリフ)反映
+        //yield return StartCoroutine(Skip());//クリックで進む
+        yield return new WaitForSeconds(_autoSpan);//オートで進む
+        _textID++; //次の行へ
 
+        if (_textID == 43)
+        {
+            Debug.Log("一旦終了");
+            gameObject.SetActive(false);
+            yield break;
+        }
         else
         {
-            Debug.Log("ポーズ中");
+            StartCoroutine(Cotext());
         }
     }
 }
